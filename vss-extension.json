@@ -3,7 +3,7 @@
   "id": "294d2e8e-96f8-4be4-982b-077c7cbc4ca4",
   "name": "Sebata Build Validation Manager",
   "friendlyName": "Sebata Build Validation Manager",
-  "description": "Validate your latests builds for any failed builds or builds in progress and branch being used. Version : 0.1.7 (Beta)",
+  "description": "Validate your latests builds for any failed builds or builds in progress and branch being used. Version : 0.1.8 (Beta)",
   "author": "Trevor Fourie",
   "publisher": "TrevorFourie",
   "helpMarkDown": "[More Information](https://marketplace.visualstudio.com/items?itemName=TrevorFourie.294d2e8e-96f8-4be4-982b-077c7cbc4ca4)",
@@ -24,7 +24,7 @@
     "Azure Pipelines"
   ],
   "demands": [],
-  "version": "0.1.7",
+  "version": "0.1.8",
   "instanceNameFormat": "Sebata Build Validation Manager",
   "tags": [
     "Build Validation",
@@ -43,26 +43,26 @@
   },
   "repository": {
     "type": "git",
-    "uri": "https://github.com/TrevorFourie/Azure"
+    "uri": "https://github.com/TrevorFourie/Sebata.Build.Validation.Manager"
   },
   "links": {
     "home": {
-      "uri": "https://github.com/TrevorFourie/Azure"
+      "uri": "https://github.com/TrevorFourie/Sebata.Build.Validation.Manager"
     },
     "getstarted": {
-      "uri": "https://github.com/TrevorFourie/Azure"
+      "uri": "https://github.com/TrevorFourie/Sebata.Build.Validation.Manager"
     },
     "support": {
-      "uri": "https://github.com/TrevorFourie/Azure/issues"
+      "uri": "https://github.com/TrevorFourie/Sebata.Build.Validation.Manager/issues"
     },
     "issues": {
-      "uri": "https://github.com/TrevorFourie/Azure/issues"
+      "uri": "https://github.com/TrevorFourie/Sebata.Build.Validation.Manager/issues"
     },
     "repository": {
-      "uri": "https://github.com/TrevorFourie/Azure"
+      "uri": "https://github.com/TrevorFourie/Sebata.Build.Validation.Manager"
     },
     "learn": {
-      "uri": "https://github.com/TrevorFourie/"
+      "uri": "https://github.com/TrevorFourie/Sebata.Build.Validation.Manager"
     }
   },
   "branding": {
