@@ -1,0 +1,174 @@
+{
+  "id": "294d2e8e-96f8-4be4-982b-077c7cbc4ca4",
+  "name": "Sebata Build Validation Manager",
+  "friendlyName": "Sebata Build Validation Manager",
+  "description": "Validate your latests builds for any failed builds or builds in progress and branch being used. Version : 0.1.7 (Beta)",
+  "author": "Trevor Fourie",
+  "publisher": "TrevorFourie",
+  "helpMarkDown": "[More Information](https://marketplace.visualstudio.com/items?itemName=TrevorFourie.294d2e8e-96f8-4be4-982b-077c7cbc4ca4)",
+  "category": "Deploy",
+  "visibility": [
+    "Release"
+  ],
+  "runsOn": [
+    "DeploymentGroup",
+    "Agent"
+  ],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "7"
+  },
+  "icons": {
+    "default": "images/icon.svg"
+  },
+  "demands": [],
+  "instanceNameFormat": "Sebata Build Validation Manager",
+  "groups": [
+    {
+      "name": "validate",
+      "displayName": "Validation Options",
+      "isExpanded": true
+    },
+    {
+      "name": "build",
+      "displayName": "Build Options",
+      "isExpanded": true
+    },
+    {
+      "name": "mail",
+      "displayName": "E-Mail Options",
+      "isExpanded": true
+    }
+  ],
+  "inputs": [
+    {
+      "name": "azOrgName",
+      "label": "Organisation Name",
+      "type": "string",
+      "required": true,
+      "groupName": "validate",
+      "defaultValue": "",
+      "helpMarkDown": "Specify the organisation name as found in your url"
+    },
+    {
+      "name": "azProjectName",
+      "label": "Project Name",
+      "type": "string",
+      "required": true,
+      "groupName": "validate",
+      "defaultValue": "",
+      "helpMarkDown": "Specify the project name as found in your url"
+    },
+    {
+      "name": "azRepoName",
+      "label": "Repository Name",
+      "type": "string",
+      "required": true,
+      "groupName": "validate",
+      "defaultValue": "",
+      "helpMarkDown": "Specify the repository name as found in the project specified"
+    },
+    {
+      "name": "azBranchName",
+      "label": "Branch Name",
+      "type": "string",
+      "required": true,
+      "groupName": "validate",
+      "defaultValue": "",
+      "helpMarkDown": "Specify the branch name as found in the repository specified"
+    },
+    {
+      "name": "azCheckBuild",
+      "label": "Use Custom Build List",
+      "type": "boolean",
+      "defaultValue": "0",
+      "required": false,
+      "groupName": "build",
+      "helpMarkDown": "Select this option to choose your own builds to validate."
+    },
+    {
+      "name": "azBuildDefId",
+      "label": "Build Name(s)",
+      "type": "multiLine",
+      "required": true,
+      "groupName": "build",
+      "defaultValue": "",
+      "helpMarkDown": "Specify multiple definitions to validate without using any quotation marks. Seperate multiple values with ';' Example: Build1;Build2;Build3;Build4",
+      "visibleRule": "azCheckBuild=true"
+    },
+    {
+      "name": "azBuildAttempts",
+      "label": "Build Attempts",
+      "type": "integer",
+      "required": true,
+      "groupName": "validate",
+      "defaultValue": "1",
+      "helpMarkDown": "Specify the number of latest builds to return. Default is 1"
+    },
+    {
+      "name": "azSendMail",
+      "label": "Send E-Mail Notifications",
+      "type": "boolean",
+      "defaultValue": "0",
+      "required": false,
+      "groupName": "mail",
+      "helpMarkDown": "Select to send e-mail notifications on failures."
+    },
+    {
+      "name": "azSmtpServer",
+      "label": "SMTP Mail Server",
+      "type": "string",
+      "required": true,
+      "groupName": "mail",
+      "defaultValue": "",
+      "helpMarkDown": "Specify your mail server",
+      "visibleRule": "azSendMail=true"
+    },
+    {
+      "name": "azSmtpPort",
+      "label": "SMTP Mail Port",
+      "type": "string",
+      "required": true,
+      "groupName": "mail",
+      "defaultValue": "",
+      "helpMarkDown": "Specify your mail server port to use",
+      "visibleRule": "azSendMail=true"
+    },
+    {
+      "name": "azSmtpUser",
+      "label": "SMTP User Name",
+      "type": "string",
+      "required": true,
+      "groupName": "mail",
+      "defaultValue": "",
+      "helpMarkDown": "Specify your mail server user login",
+      "visibleRule": "azSendMail=true"
+    },
+    {
+      "name": "azSmtpPass",
+      "label": "SMTP User Login Password",
+      "type": "string",
+      "required": true,
+      "groupName": "mail",
+      "defaultValue": "",
+      "helpMarkDown": "Specify your mail server user login password to use. Recommended to use a variable with 'Secret' enabled",
+      "visibleRule": "azSendMail=true"
+    },
+    {
+      "name": "azSmtpTo",
+      "label": "Send Mail To",
+      "type": "string",
+      "required": true,
+      "groupName": "mail",
+      "defaultValue": "",
+      "helpMarkDown": "Specify multiple e-mails to use without using any quotation marks. Seperate multiple values with ';' Example: mail1@something.com;mail2@something.com;mail3@something.com;mail4@something.com",
+      "visibleRule": "azSendMail=true"
+    }
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "module/BuildValidationModule.ps1"
+    }
+  }
+}
