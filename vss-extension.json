@@ -1,0 +1,109 @@
+{
+  "manifestVersion": 1,
+  "id": "294d2e8e-96f8-4be4-982b-077c7cbc4ca4",
+  "name": "Sebata Build Validation Manager",
+  "friendlyName": "Sebata Build Validation Manager",
+  "description": "Validate your latests builds for any failed builds or builds in progress and branch being used. Version : 0.1.7 (Beta)",
+  "author": "Trevor Fourie",
+  "publisher": "TrevorFourie",
+  "helpMarkDown": "[More Information](https://marketplace.visualstudio.com/items?itemName=TrevorFourie.294d2e8e-96f8-4be4-982b-077c7cbc4ca4)",
+  "category": "Deploy",
+  "visibility": [
+    "Release"
+  ],
+  "runsOn": [
+    "DeploymentGroup",
+    "Agent"
+  ],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services.Cloud"
+    }
+  ],
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "demands": [],
+  "version": "0.1.7",
+  "instanceNameFormat": "Sebata Build Validation Manager",
+  "tags": [
+    "Build Validation",
+    "Branch",
+    "E-Mail Notification",
+    "Release",
+    "Build"
+  ],
+  "content": {
+    "details": {
+      "path": "infopage.html"
+    },
+    "license": {
+      "path": "license.txt"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/TrevorFourie/Azure"
+  },
+  "links": {
+    "home": {
+      "uri": "https://github.com/TrevorFourie/Azure"
+    },
+    "getstarted": {
+      "uri": "https://github.com/TrevorFourie/Azure"
+    },
+    "support": {
+      "uri": "https://github.com/TrevorFourie/Azure/issues"
+    },
+    "issues": {
+      "uri": "https://github.com/TrevorFourie/Azure/issues"
+    },
+    "repository": {
+      "uri": "https://github.com/TrevorFourie/Azure"
+    },
+    "learn": {
+      "uri": "https://github.com/TrevorFourie/"
+    }
+  },
+  "branding": {
+    "color": "#3b3b98",
+    "theme": "dark"
+  },
+  "icons": {
+    "default": "images/icon.png"
+  },
+  "screenshots": [
+    {
+      "path": "images/Options_1.png"
+    },
+    {
+      "path": "images/Options_2.png"
+    },
+    {
+      "path": "images/Access.png"
+    },
+    {
+      "path": "images/password.png"
+    },
+    {
+      "path": "images/stage.png"
+    }
+  ],
+  "files": [
+    {
+      "path": "Task"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "294d2e8e-96f8-4be4-982b-077c7cbc4ca4",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Task"
+      }
+    }
+  ]
+}
